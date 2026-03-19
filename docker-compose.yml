@@ -5,9 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: the-way-recognition
     ports:
-      - "8000:8000"
+      - "8003:8000"
     volumes:
-      - ../cards.db:/app/cards.db
+      - ./cards.db:/app/cards.db
     environment:
       - PYTHONUNBUFFERED=1
       - DATABASE_URL=sqlite:///./cards.db
