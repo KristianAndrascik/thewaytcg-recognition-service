@@ -11,5 +11,7 @@ wheels/
 test_data/
 
 data/
+!cards.db
 *.db
+!cards.db
 .env

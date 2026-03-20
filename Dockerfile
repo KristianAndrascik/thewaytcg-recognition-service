@@ -22,6 +22,7 @@ RUN uv pip install --system --no-cache -r requirements.txt
 # Copy application files
 COPY src ./src
 COPY run.py ./
+COPY cards.db ./cards.db
 
 EXPOSE 8000
 

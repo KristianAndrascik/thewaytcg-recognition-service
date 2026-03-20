@@ -4,7 +4,7 @@ from pathlib import Path
 import unicodedata
 
 CSV_PATH = Path("data") / "cards.csv"
-OUTPUT_DIR = Path("data") / "json"
+OUTPUT_DIR = Path("data") / "gt" / "json"
 
 TOTAL_CARDS = 50
 
@@ -40,7 +40,7 @@ def csv_row_to_json(row):
         "footer": footer
     }
 
-with open(CSV_PATH, encoding="utf-8") as f:
+with open(CSV_PATH, encoding="utf-8-sig") as f:
     reader = csv.DictReader(f)
     for i, row in enumerate(reader):
         if i >= TOTAL_CARDS:
